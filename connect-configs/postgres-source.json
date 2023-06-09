@@ -1,0 +1,17 @@
+{
+    "name": "postgres-source",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.dbname": "root",
+        "database.hostname": "postgres",
+        "database.password": "secret",
+        "database.user": "root",
+        "plugin.name": "pgoutput",
+        "topic.prefix": "pg",
+        "topic.creation.default.replication.factor": 1,
+        "topic.creation.default.partitions": 4,
+        "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "tasks.max": 3
+    }
+}
