@@ -27,14 +27,19 @@ services:
       - --advertise-rpc-addr
       - redpanda-1:33145
     ports:
-      # - 8081:8081
+      - 8081:8081
       - 8082:8082
       - 9092:9092
       - 28082:28082
       - 29092:29092
 
   kafka-connect:
+    # remove or comment the following line for the Chapter 3 tutorial
     image: debezium/connect:2.3
+    # uncomment the following lines for the Chapter 3 tutorial
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     depends_on:
       - redpanda-1
     ports:
@@ -68,7 +73,8 @@ services:
         kafka:
           brokers: ["redpanda-1:29092"]
           schemaRegistry:
-            enabled: false
+            enabled: true
+            urls: ["http://redpanda-1:8081"]
         redpanda:
           adminApi:
             enabled: true

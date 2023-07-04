@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "Purchase",
+  "namespace": "com.example",
+  "fields": [
+    { "name": "id", "type": "int" },
+    { "name": "product_id", "type": "int" },
+    { "name": "quantity", "type": "int" },
+    { "name": "customer_id", "type": "int" },
+    { "name": "purchase_date", "type": { "type": "long", "logicalType": "timestamp-millis" } },
+    { "name": "price", "type": { "type": "bytes", "logicalType": "decimal", "precision": 10, "scale": 2 } },
+    { "name": "currency", "type": "string" }
+  ]
+}
+
