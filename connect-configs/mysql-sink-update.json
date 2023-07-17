@@ -1,0 +1,15 @@
+{
+    "connection.password": "secret",
+    "connection.url": "jdbc:mysql://mysql/public",
+    "connection.username": "connect",
+    "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",
+    "database.time_zone": "UTC",
+    "delete.enabled": "true",
+    "insert.mode": "upsert",
+    "primary.key.mode": "record_key",
+    "schema.evolution": "basic",
+    "tasks.max": 2,
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "topics": "pg.public.purchases"
+}
