@@ -52,7 +52,7 @@ psql -c "SELECT * FROM public.purchases;"
 Verify the destination table in MySQL is empty:
 
 ```sql
-mysql -e "SELECT COUNT(*) FROM pg_public_purchases;"
+SELECT COUNT(*) FROM pg_public_purchases;
 
 # expected output
 +----------+
