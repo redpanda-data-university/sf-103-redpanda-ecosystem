@@ -65,7 +65,7 @@ mysql -e "SELECT COUNT(*) FROM pg_public_purchases;"
 Verify that the Debezium connectors are installed:
 
 ```sh
-docker-compose exec -ti kafka-connect ls /kafka/connect
+docker exec -ti kafka-connect ls /kafka/connect
 
 # expected output
 debezium-connector-db2	    debezium-connector-postgres
