@@ -26,9 +26,9 @@ Then, set the following aliases so that any invocation of rpk, psql, and mysql u
 ```sh
 alias rpk="docker exec -ti redpanda-1 rpk"
 
-alias psql="docker-compose exec -ti postgres psql"
+alias psql="docker exec -ti postgres psql"
 
-alias mysql="docker-compose exec -ti mysql mysql \
+alias mysql="docker exec -ti mysql mysql \
     -D public \
     -u connect \
     -psecret"
