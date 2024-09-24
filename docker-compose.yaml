@@ -36,6 +36,7 @@ services:
   kafka-connect:
     # remove or comment the following line for the Chapter 3 tutorial
     image: debezium/connect:2.3
+    container_name: kafka-connect
     # uncomment the following lines for the Chapter 3 tutorial
     # build:
     #   context: .
