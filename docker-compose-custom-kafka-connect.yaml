@@ -34,8 +34,10 @@ services:
       - 29092:29092
 
   kafka-connect:
-    image: debezium/connect:2.3
     container_name: kafka-connect
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - redpanda-1
     ports:
