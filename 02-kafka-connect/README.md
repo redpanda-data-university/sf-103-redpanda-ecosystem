@@ -26,9 +26,9 @@ Then, set the following aliases so that any invocation of rpk, psql, and mysql u
 ```sh
 alias rpk="docker exec -ti redpanda-1 rpk"
 
-alias psql="docker-compose exec -ti postgres psql"
+alias psql="docker exec -ti postgres psql"
 
-alias mysql="docker-compose exec -ti mysql mysql \
+alias mysql="docker exec -ti mysql mysql \
     -D public \
     -u connect \
     -psecret"
@@ -65,7 +65,7 @@ mysql -e "SELECT COUNT(*) FROM pg_public_purchases;"
 Verify that the Debezium connectors are installed:
 
 ```sh
-docker-compose exec -ti kafka-connect ls /kafka/connect
+docker exec -ti kafka-connect ls /kafka/connect
 
 # expected output
 debezium-connector-db2	    debezium-connector-postgres
